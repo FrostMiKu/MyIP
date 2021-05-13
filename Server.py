@@ -22,6 +22,7 @@ def main():
     global ip 
 
     t = threading.Thread(target=web)
+    t.setDaemon(True)
     t.start()
 
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)

@@ -13,8 +13,8 @@ def main():
     while True:
         try:
             s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-            s.connect(("cloud.frostmiku.com",11086))
-            s.send(bytes("qwerty123456","utf-8"))
+            s.connect(("your.server.ip.here",11086))
+            s.send("qwerty123456".encode("utf-8"))
             print("send data...")
             s.close()
         except:

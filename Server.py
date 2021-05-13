@@ -14,7 +14,7 @@ def web():
         conn,addr = s.accept()
         request_data = conn.recv(1024)
         res = http_header + "<html><head><title>My IP</title></head><body><h1>"+ip+"</h1></body></html>"
-        conn.send(bytes(res,"utf-8"))
+        conn.send(res.encode("utf-8"))
         conn.close()
 
 
